@@ -11,6 +11,9 @@ import com.gopi.securevault.ui.policies.PoliciesActivity
 import com.gopi.securevault.ui.pan.PanActivity
 import com.gopi.securevault.ui.voterid.VoterIdActivity
 import com.gopi.securevault.ui.license.LicenseActivity
+import com.gopi.securevault.ui.settings.SettingsActivity
+import android.widget.Toast
+import com.gopi.securevault.ui.auth.LoginActivity
 
 class HomeActivity : BaseActivity() {
     private lateinit var binding: ActivityHomeBinding
@@ -28,5 +31,13 @@ class HomeActivity : BaseActivity() {
         binding.btnPan.setOnClickListener { startActivity(Intent(this, PanActivity::class.java)) }
         binding.btnVoterId.setOnClickListener { startActivity(Intent(this, VoterIdActivity::class.java)) }
         binding.btnLicense.setOnClickListener { startActivity(Intent(this, LicenseActivity::class.java)) }
+        binding.btnSettings.setOnClickListener { startActivity(Intent(this, SettingsActivity::class.java)) }
+        binding.btnLogout.setOnClickListener {
+            // TODO: Implement a proper logout mechanism
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            Toast.makeText(this, "Logged out successfully", Toast.LENGTH_SHORT).show()
+        }
     }
 }

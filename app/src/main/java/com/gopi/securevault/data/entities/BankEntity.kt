@@ -15,5 +15,6 @@ data class BankEntity(
     val profilePrivy: String?,
     val mPin: String?,
     val tPin: String?,
-    val notes: String?
+    val notes: String?,
+    val privy: String?
 )
