@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Eternal Vault</string>
+    <string name="welcome">Welcome %1$s</string>
+</resources>

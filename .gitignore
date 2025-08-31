@@ -1,0 +1,35 @@
+# Gradle files
+.gradle/
+/build/
+
+# Local configuration file (sdk path, etc)
+/local.properties
+
+# A file that may contain local user-specific IDE settings.
+.idea/workspace.xml
+.idea/libraries/
+.idea/assetSources.xml
+.idea/vcs.xml
+.idea/navEditor.xml
+.idea/modules.xml
+
+# Generated files
+/app/build
+/app/.cxx
+/app/local.properties
+/app/src/main/assets/
+/app/src/main/res/
+
+# Keystore file
+*.jks
+*.keystore
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+.cxx/
+
+# Android Studio 3.5+
+.idea/gradle.xml
+
+# Mac OS files
+.DS_Store
