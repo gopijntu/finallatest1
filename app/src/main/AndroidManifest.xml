@@ -15,21 +15,29 @@
 
         <!-- All sensitive activities should NOT be exported -->
         <activity android:name=".ui.settings.SettingsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ui.home.HomeActivity" />
         <activity android:name=".ui.aadhar.AadharActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ui.home.HomeActivity" />
         <activity android:name=".ui.pan.PanActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ui.home.HomeActivity" />
         <activity android:name=".ui.voterid.VoterIdActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ui.home.HomeActivity" />
         <activity android:name=".ui.license.LicenseActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ui.home.HomeActivity" />
         <activity android:name=".ui.policies.PoliciesActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ui.home.HomeActivity" />
         <activity android:name=".ui.cards.CardsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ui.home.HomeActivity" />
         <activity android:name=".ui.banks.BanksActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ui.home.HomeActivity" />
         <activity android:name=".ui.home.HomeActivity"
             android:exported="false" />
         <activity android:name=".ui.auth.SetupActivity"

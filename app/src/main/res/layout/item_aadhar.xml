@@ -81,13 +81,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="end"
             android:layout_marginTop="16dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnDownload"
                 style="?attr/materialButtonOutlinedStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="Download"
                 android:visibility="gone"/>
@@ -95,7 +95,8 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnEdit"
                 style="?attr/materialButtonOutlinedStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="Edit"
                 android:layout_marginStart="8dp"/>
@@ -103,7 +104,8 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnDelete"
                 style="?attr/materialButtonOutlinedStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="Delete"
                 android:layout_marginStart="8dp"/>

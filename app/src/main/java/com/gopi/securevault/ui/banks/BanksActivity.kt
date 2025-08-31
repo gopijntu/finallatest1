@@ -60,6 +60,7 @@ class BanksActivity : AppCompatActivity() {
             dlgBinding.etCIF.editText?.setText(it.cifNo ?: "")
             dlgBinding.etUsername.editText?.setText(it.username ?: "")
             dlgBinding.etProfilePrivy.editText?.setText(it.profilePrivy ?: "")
+            dlgBinding.etPrivy.editText?.setText(it.privy ?: "")
             dlgBinding.etMPin.editText?.setText(it.mPin ?: "")
             dlgBinding.etTPin.editText?.setText(it.tPin ?: "")
             dlgBinding.etNotes.editText?.setText(it.notes ?: "")
@@ -82,6 +83,7 @@ class BanksActivity : AppCompatActivity() {
                         cifNo = dlgBinding.etCIF.editText?.text.toString(),
                         username = dlgBinding.etUsername.editText?.text.toString(),
                         profilePrivy = dlgBinding.etProfilePrivy.editText?.text.toString(),
+                        privy = dlgBinding.etPrivy.editText?.text.toString(),
                         mPin = dlgBinding.etMPin.editText?.text.toString(),
                         tPin = dlgBinding.etTPin.editText?.text.toString(),
                         notes = dlgBinding.etNotes.editText?.text.toString()
@@ -136,6 +138,7 @@ private class BankVH(
         binding.tvCIF.text = "CIF: ${item.cifNo ?: ""}"
         binding.tvUsername.text = "Username: ${item.username ?: ""}"
         binding.tvProfilePrivy.text = "Profile Privy: ${item.profilePrivy ?: ""}"
+        binding.tvPrivy.text = "Privy: ${item.privy ?: ""}"
         binding.tvMPin.text = "M Pin: ${item.mPin ?: ""}"
         binding.tvTPin.text = "T Pin: ${item.tPin ?: ""}"
         binding.tvNotes.text = "Notes: ${item.notes ?: ""}"
