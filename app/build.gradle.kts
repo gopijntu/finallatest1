@@ -108,4 +108,9 @@ dependencies {
 
     // Gson
     implementation("com.google.code.gson:gson:2.10.1")
+
+    // Iconics
+    implementation("com.mikepenz:iconics-core:5.4.0")
+    implementation("com.mikepenz:iconics-views:5.4.0")
+    implementation("com.mikepenz:google-material-typeface:4.0.0.1-kotlin@aar")
 }

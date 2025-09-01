@@ -28,7 +28,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilName"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                style="@style/RoundedInputStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Your Name">
@@ -41,7 +41,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilPassword"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                style="@style/RoundedInputStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -57,7 +57,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilQ1"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                style="@style/RoundedInputStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -71,7 +71,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilA1"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                style="@style/RoundedInputStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -85,7 +85,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilQ2"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                style="@style/RoundedInputStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -99,7 +99,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilA2"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                style="@style/RoundedInputStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -113,10 +113,10 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSave"
+                style="@style/PillButtonStyle"
                 android:text="Save &amp; Continue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingVertical="16dp"
                 android:layout_marginTop="32dp"/>
 
             <TextView
