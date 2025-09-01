@@ -12,7 +12,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etBankName"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            style="@style/RoundedInputStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Bank Name">
@@ -24,7 +24,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etCardNumber"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            style="@style/RoundedInputStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -37,7 +37,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etCardType"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            style="@style/RoundedInputStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -50,7 +50,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etValidTill"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            style="@style/RoundedInputStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -63,7 +63,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etCVV"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            style="@style/RoundedInputStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -76,7 +76,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etCustomerId"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            style="@style/RoundedInputStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -89,7 +89,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etPin"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            style="@style/RoundedInputStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -103,7 +103,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etNotes"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            style="@style/RoundedInputStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"

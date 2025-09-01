@@ -8,7 +8,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilName"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/RoundedInputStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Policy Name">
@@ -21,7 +21,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilAccount"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/RoundedInputStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -35,7 +35,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilCompany"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/RoundedInputStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -49,7 +49,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilNextPremiumDate"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/RoundedInputStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -63,7 +63,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilPremiumValue"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/RoundedInputStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -77,7 +77,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilMaturityValue"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/RoundedInputStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -91,7 +91,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilNotes"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/RoundedInputStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

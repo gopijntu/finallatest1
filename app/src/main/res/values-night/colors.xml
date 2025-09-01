@@ -1,6 +1,6 @@
 <resources>
-    <color name="primary">#A3C9FF</color>
-    <color name="onPrimary">#003063</color>
+    <color name="primary">#2196F3</color>
+    <color name="onPrimary">#FFFFFF</color>
     <color name="primaryContainer">#00468C</color>
     <color name="onPrimaryContainer">#D3E3FF</color>
     <color name="secondary">#BBC7DB</color>
@@ -15,10 +15,10 @@
     <color name="onError">#601410</color>
     <color name="errorContainer">#8C1D18</color>
     <color name="onErrorContainer">#F9DEDC</color>
-    <color name="background">#1B1B1F</color>
-    <color name="onBackground">#E3E2E6</color>
-    <color name="surface">#1B1B1F</color>
-    <color name="onSurface">#E3E2E6</color>
+    <color name="background">#121212</color>
+    <color name="onBackground">#FFFFFF</color>
+    <color name="surface">#1E1E1E</color>
+    <color name="onSurface">#FFFFFF</color>
     <color name="surfaceVariant">#44474F</color>
     <color name="onSurfaceVariant">#C4C6CF</color>
     <color name="outline">#8E9099</color>

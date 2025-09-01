@@ -35,7 +35,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilPassword"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            style="@style/RoundedInputStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxWidth="360dp"
@@ -51,11 +51,11 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogin"
+            style="@style/PillButtonStyle"
             android:text="Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxWidth="360dp"
-            android:paddingVertical="16dp"
             android:layout_marginTop="24dp"/>
 
         <!-- Added Forgot Password text -->
