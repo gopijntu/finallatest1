@@ -17,6 +17,7 @@ import com.gopi.securevault.data.db.AppDatabase
 import com.gopi.securevault.data.entities.VoterIdEntity
 import com.gopi.securevault.databinding.ActivityVoterIdBinding
 import com.gopi.securevault.databinding.ItemVoterIdBinding
+import com.gopi.securevault.util.AppConstants
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import java.io.File
@@ -29,7 +30,13 @@ class VoterIdActivity : AppCompatActivity() {
     private val adapter = VoterIdAdapter(
         onEdit = { entity -> showCreateOrEditDialog(entity) },
         onDelete = { entity -> lifecycleScope.launch { dao.delete(entity) } },
-        onDownload = { path -> openFile(path) }
+        onDownload = { path ->
+            if (AppConstants.FEATURE_FLAG_PREMIUM == 1) {
+                openFile(path)
+            } else {
+                Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show()
+            }
+        }
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,11 +74,15 @@ class VoterIdActivity : AppCompatActivity() {
         }
 
         dlgBinding.btnUpload.setOnClickListener {
-            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
-                addCategory(Intent.CATEGORY_OPENABLE)
-                type = "*/*"
+            if (AppConstants.FEATURE_FLAG_PREMIUM == 1) {
+                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+                    addCategory(Intent.CATEGORY_OPENABLE)
+                    type = "*/*"
+                }
+                filePickerLauncher.launch(intent)
+            } else {
+                Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show()
             }
-            filePickerLauncher.launch(intent)
         }
 
         val dlg = AlertDialog.Builder(this)
