@@ -22,6 +22,7 @@ import android.content.ClipboardManager
 import android.content.Intent
 import android.net.Uri
 import androidx.activity.result.contract.ActivityResultContracts
+import com.gopi.securevault.util.AppConstants
 import java.io.File
 import java.io.FileOutputStream
 
@@ -33,7 +34,13 @@ class AadharActivity : AppCompatActivity() {
         onEdit = { entity -> showCreateOrEditDialog(entity) },
         onDelete = { entity -> lifecycleScope.launch { dao.delete(entity) } },
         onCopy = { aadharNumber -> copyToClipboard(aadharNumber) },
-        onDownload = { path -> openFile(path) }
+        onDownload = { path ->
+            if (AppConstants.FEATURE_FLAG_PREMIUM == 1) {
+                openFile(path)
+            } else {
+                Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show()
+            }
+        }
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,11 +84,15 @@ class AadharActivity : AppCompatActivity() {
         }
 
         dlgBinding.btnUpload.setOnClickListener {
-            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
-                addCategory(Intent.CATEGORY_OPENABLE)
-                type = "application/pdf"
+            if (AppConstants.FEATURE_FLAG_PREMIUM == 1) {
+                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+                    addCategory(Intent.CATEGORY_OPENABLE)
+                    type = "application/pdf"
+                }
+                filePickerLauncher.launch(intent)
+            } else {
+                Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show()
             }
-            filePickerLauncher.launch(intent)
         }
 
         val dlg = AlertDialog.Builder(this)

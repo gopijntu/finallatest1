@@ -17,6 +17,7 @@ import com.gopi.securevault.data.db.AppDatabase
 import com.gopi.securevault.data.entities.PanEntity
 import com.gopi.securevault.databinding.ActivityPanBinding
 import com.gopi.securevault.databinding.ItemPanBinding
+import com.gopi.securevault.util.AppConstants
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import java.io.File
@@ -29,7 +30,13 @@ class PanActivity : AppCompatActivity() {
     private val adapter = PanAdapter(
         onEdit = { entity -> showCreateOrEditDialog(entity) },
         onDelete = { entity -> lifecycleScope.launch { dao.delete(entity) } },
-        onDownload = { path -> openFile(path) }
+        onDownload = { path ->
+            if (AppConstants.FEATURE_FLAG_PREMIUM == 1) {
+                openFile(path)
+            } else {
+                Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show()
+            }
+        }
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,11 +73,15 @@ class PanActivity : AppCompatActivity() {
         }
 
         dlgBinding.btnUpload.setOnClickListener {
-            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
-                addCategory(Intent.CATEGORY_OPENABLE)
-                type = "application/pdf"
+            if (AppConstants.FEATURE_FLAG_PREMIUM == 1) {
+                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+                    addCategory(Intent.CATEGORY_OPENABLE)
+                    type = "application/pdf"
+                }
+                filePickerLauncher.launch(intent)
+            } else {
+                Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show()
             }
-            filePickerLauncher.launch(intent)
         }
 
         val dlg = AlertDialog.Builder(this)
