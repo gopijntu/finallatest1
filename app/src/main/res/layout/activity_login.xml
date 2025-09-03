@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="32dp">
+    android:padding="32dp"
+    android:background="@drawable/login_background">
 
     <LinearLayout
         android:id="@+id/container"
@@ -16,6 +17,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="150dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo" />
+
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
@@ -23,6 +35,7 @@
             android:text="Welcome to Eternal Vault"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:textColor="@android:color/white"
             android:layout_marginBottom="8dp"/>
 
         <TextView
@@ -31,6 +44,7 @@
             android:layout_height="wrap_content"
             android:text="Please enter password to enter into your world."
             android:textSize="16sp"
+            android:textColor="@android:color/white"
             android:layout_marginBottom="32dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -40,13 +54,18 @@
             android:layout_height="wrap_content"
             android:maxWidth="360dp"
             android:hint="Password"
-            app:passwordToggleEnabled="true">
+            app:endIconMode="password_toggle"
+            app:boxStrokeColor="#3A5F9E"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="4dp"
+            app:boxBackgroundColor="#E0E0E0">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:textColor="#000000" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -56,9 +75,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxWidth="360dp"
-            android:layout_marginTop="24dp"/>
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_gradient_full" />
 
-        <!-- Added Forgot Password text -->
         <TextView
             android:id="@+id/tvForgot"
             android:layout_width="wrap_content"
